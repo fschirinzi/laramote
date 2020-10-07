@@ -8,11 +8,24 @@
 LaraMote allows you to run tasks in Laravel from remote. This package is helpful if you are testing
 your frontend (SPA) application with [Cypress](https://www.cypress.io/) that uses a Laravel application as backend.
 
-At the moment, the following tasks can be run:
+At the moment, these features are implemented:
 
 :white_check_mark: Artisan command <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Command with parameters <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Get Output <br>
 :white_check_mark: Login User <br>
-:white_check_mark: Factory make or create
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Custom key value <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Custom key/table column <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Custom model <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Remember <br>
+:white_check_mark: Factory <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Make/Create <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Models <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Name <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: States <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Amount <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Show hidden attributes <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Override attributes <br>
 
 ## Installation
 
