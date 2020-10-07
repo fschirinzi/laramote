@@ -1,0 +1,56 @@
+{
+    "name": "fschirinzi/laramote",
+    "description": "Laravel Remote",
+    "keywords": [
+        "fschirinzi",
+        "laramote"
+    ],
+    "homepage": "https://github.com/fschirinzi/laramote",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Francesco Schirinzi",
+            "email": "fschirinzi25@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "laravel/framework": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fschirinzi\\LaraMote\\": "src",
+            "App\\": "stubs/app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fschirinzi\\LaraMote\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fschirinzi\\LaraMote\\LaraMoteServiceProvider"
+            ],
+            "aliases": {
+                "LaraMote": "Fschirinzi\\LaraMote\\LaraMoteFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
