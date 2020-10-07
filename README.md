@@ -27,6 +27,11 @@ At the moment, these features are implemented:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Show hidden attributes <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Override attributes <br>
 
+**TODO** <br>
+[] Make Commands working <br>
+[] Make Tests
+[] Add wiki page with all endpoints and their parameters
+
 ## Installation
 
 You can install the package via composer:
@@ -66,6 +71,11 @@ protected function gate()
     });
 }
 ```
+
+### Examples
+
+You can import `Insomnia_example_requests.json` into the [Insomnia Rest-client](https://insomnia.rest/) to see some examples in action.
+
 ## Upgrading
 
 When upgrading to a new version of Laramote, you should re-publish LaraMote's assets:

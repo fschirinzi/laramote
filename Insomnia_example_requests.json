@@ -1,0 +1,297 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2020-10-07T13:50:10.031Z",
+    "__export_source": "insomnia.desktop.app:v2020.4.1",
+    "resources": [
+        {
+            "_id": "req_a7698d3486994ce2bbc1df8c7fa76c88",
+            "parentId": "fld_056bdd4fdd1a448f843b69ddfd3196e5",
+            "modified": 1602078244236,
+            "created": 1602070961037,
+            "url": "{{ base_url  }}/laramote/artisan/call",
+            "name": "Artisan Migrate",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "multipart/form-data",
+                "params": [
+                    {
+                        "name": "command",
+                        "value": "migrate",
+                        "description": "",
+                        "id": "pair_e46b1a2347fc49828828e8c2a5749d64"
+                    }
+                ]
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "multipart/form-data",
+                    "id": "pair_1d8b29384cf3438b871868748e374d67"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1584242932018.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_056bdd4fdd1a448f843b69ddfd3196e5",
+            "parentId": "fld_3d154bcba59c442bb83b365777b5e4d9",
+            "modified": 1602072472741,
+            "created": 1602072472741,
+            "name": "Artisan",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1602072472741,
+            "_type": "request_group"
+        },
+        {
+            "_id": "fld_3d154bcba59c442bb83b365777b5e4d9",
+            "parentId": "wrk_58c358317f14414a8d2e08541f4e535d",
+            "modified": 1602070047716,
+            "created": 1602070047638,
+            "name": "Dev",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1000000000,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_58c358317f14414a8d2e08541f4e535d",
+            "parentId": null,
+            "modified": 1602078570971,
+            "created": 1602058745764,
+            "name": "Fschirinzi\\LaraMote",
+            "description": "# Remote for Laravel\nOfficial repository [fschirinzi\\laramote](https://github.com/fschirinzi/laramote)",
+            "scope": null,
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_6ab37571388a49cbaad82e97b94b3679",
+            "parentId": "fld_056bdd4fdd1a448f843b69ddfd3196e5",
+            "modified": 1602078239246,
+            "created": 1602070981513,
+            "url": "{{ base_url  }}/laramote/artisan/call",
+            "name": "Artisan DB:Seed",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "multipart/form-data",
+                "params": [
+                    {
+                        "name": "command",
+                        "value": "db:seed",
+                        "description": "",
+                        "id": "pair_e46b1a2347fc49828828e8c2a5749d64"
+                    }
+                ]
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "multipart/form-data",
+                    "id": "pair_1d8b29384cf3438b871868748e374d67"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1584242931993.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_adbfd052feda4ec3b12071c2f65c1279",
+            "parentId": "fld_056bdd4fdd1a448f843b69ddfd3196e5",
+            "modified": 1602072916083,
+            "created": 1602070047660,
+            "url": "{{ base_url  }}/laramote/artisan/call",
+            "name": "Artisan Migrate:Refresh",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "multipart/form-data",
+                "params": [
+                    {
+                        "name": "command",
+                        "value": "migrate:refresh",
+                        "description": "",
+                        "id": "pair_e46b1a2347fc49828828e8c2a5749d64"
+                    }
+                ]
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "multipart/form-data",
+                    "id": "pair_1d8b29384cf3438b871868748e374d67"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1584242931968.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_af0f557881254742a58a8c605f62d3ed",
+            "parentId": "fld_a58c5716d4924d14a4e8d57b8bdda68d",
+            "modified": 1602078200640,
+            "created": 1602070047677,
+            "url": " {{ base_url  }}/laramote/auth/login",
+            "name": "Login User",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"key_value\": \"your@email.com\",\n\t\"key\": \"email\",\n\t\"remember\": true,\n\t\"model\": \"App\\\\User\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_bdcdb370d8c349e0bdf916e5bc9b9eed"
+                },
+                {
+                    "name": "accept",
+                    "value": "application/json",
+                    "description": "",
+                    "id": "pair_b35b924781094b1fa7e92fde3e11ce8b"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1583434785409,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_a58c5716d4924d14a4e8d57b8bdda68d",
+            "parentId": "fld_3d154bcba59c442bb83b365777b5e4d9",
+            "modified": 1602072466029,
+            "created": 1602072466029,
+            "name": "Auth",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1602072466029,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_29a84d49e3a440ed885011ee0491a954",
+            "parentId": "fld_f2297cc45ce94a7fac4e3975c0891f30",
+            "modified": 1602074831622,
+            "created": 1602070047653,
+            "url": "{{ base_url  }}/laramote/factory",
+            "name": "Create Factory",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"action\": \"create\",\n\t\"model\": \"App\\\\User\",\n\t\"states\": [\n\t\t\"admin\", \"optician\"\n\t],\n\t\"amount\": 2,\n\t\"showHiddenModelAttr\": true,\n\t\"overrides\": {\n\t\t\"firstname\": \"Your custom firstname\"\n\t}\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_57becee98aa744d78c2d4304b9d30519",
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "accept",
+                    "value": "application/json",
+                    "description": "",
+                    "id": "pair_beb826c0565a4e069672bb774f8a47c3"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1583434801088,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_f2297cc45ce94a7fac4e3975c0891f30",
+            "parentId": "fld_3d154bcba59c442bb83b365777b5e4d9",
+            "modified": 1602072493417,
+            "created": 1602072490044,
+            "name": "Factory",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1592753625744,
+            "_type": "request_group"
+        },
+        {
+            "_id": "env_aa3cbc6f884617af393e3ef267891d2e256088c2",
+            "parentId": "wrk_58c358317f14414a8d2e08541f4e535d",
+            "modified": 1602078510212,
+            "created": 1602058746051,
+            "name": "Base Environment",
+            "data": {
+                "base_url": "http://localhost:8080"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "base_url"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1602058746051,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_aa3cbc6f884617af393e3ef267891d2e256088c2",
+            "parentId": "wrk_58c358317f14414a8d2e08541f4e535d",
+            "modified": 1602073069565,
+            "created": 1602058746064,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_dca1b633d09240739dd350e2bcdeeef7",
+            "parentId": "wrk_58c358317f14414a8d2e08541f4e535d",
+            "modified": 1602058745782,
+            "created": 1602058745782,
+            "fileName": "Laramote",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        }
+    ]
+}
