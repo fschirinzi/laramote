@@ -28,9 +28,9 @@ At the moment, these features are implemented:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Override attributes <br>
 
 **TODO** <br>
-[] Make Commands working <br>
-[] Make Tests
-[] Add wiki page with all endpoints and their parameters
+- [ ] Make Commands working <br>
+- [ ] Make Tests <br>
+- [ ] Add wiki page with all endpoints and their parameters
 
 ## Installation
 
