@@ -10,9 +10,9 @@ your frontend (SPA) application with [Cypress](https://www.cypress.io/) that use
 
 At the moment, the following tasks can be run:
 
-* Artisan command
-* Login User
-* Factory make or create
+:white_check_mark: Artisan command <br>
+:white_check_mark: Login User <br>
+:white_check_mark: Factory make or create
 
 ## Installation
 
