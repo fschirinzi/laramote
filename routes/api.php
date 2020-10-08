@@ -9,7 +9,7 @@ Route::prefix('laramote')
     ->middleware('LaraMote')
     ->group(function () {
 
-        Route::post('artisan/call', [ArtisanController::class, 'call']);
+        Route::post('artisan', [ArtisanController::class, 'call']);
 
         Route::post('auth/login', [AuthController::class, 'login']);
 
