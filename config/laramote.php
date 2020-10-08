@@ -2,6 +2,7 @@
 <?php
 
 use Fschirinzi\LaraMote\Http\Middleware\EnsureUserIsAuthorized;
+use Fschirinzi\LaraMote\Http\Middleware\ForceJsonResponse;
 
 return [
 
@@ -18,6 +19,7 @@ return [
 
     'middleware' => [
         'api',
+        ForceJsonResponse::class,
         EnsureUserIsAuthorized::class,
     ],
 
