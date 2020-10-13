@@ -1,4 +1,3 @@
-
 <?php
 
 use Fschirinzi\LaraMote\Http\Middleware\EnsureUserIsAuthorized;
