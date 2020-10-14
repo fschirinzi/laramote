@@ -12,7 +12,7 @@ class ModelRequest extends FormRequest
             'model' => ['required', 'string'],
             'key' => ['nullable', 'string'],
             'key_value' => ['required'],
-            'relationships' => ['required', 'array'],
+            'relationships' => ['array'],
             'limit' => ['integer'],
             'showHiddenModelAttr' => ['sometimes', 'boolean'],
         ];
