@@ -26,6 +26,13 @@ At the moment, these features are implemented:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Amount <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Show hidden attributes <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Override attributes <br>
+:white_check_mark: Model <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Search with custom key value <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Search with custom key/table column <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Search with custom model <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Get with limit <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Load relationships <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :white_check_mark: Show hidden attributes for model and relationships <br>
 
 **TODO** <br>
 - [ ] Make Commands working <br>

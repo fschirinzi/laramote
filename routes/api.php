@@ -3,6 +3,7 @@
 use Fschirinzi\LaraMote\Http\Controllers\AuthController;
 use Fschirinzi\LaraMote\Http\Controllers\ArtisanController;
 use Fschirinzi\LaraMote\Http\Controllers\FactoryController;
+use Fschirinzi\LaraMote\Http\Controllers\ModelController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('laramote')
@@ -14,4 +15,6 @@ Route::prefix('laramote')
         Route::post('auth/login', [AuthController::class, 'login']);
 
         Route::post('factory', [FactoryController::class, 'call']);
+
+        Route::post('model', [ModelController::class, 'call']);
     });

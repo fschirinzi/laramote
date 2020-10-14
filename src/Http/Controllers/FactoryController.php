@@ -2,6 +2,7 @@
 
 namespace Fschirinzi\LaraMote\Http\Controllers;
 
+use Fschirinzi\LaraMote\LaraMote;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Fschirinzi\LaraMote\Http\Requests\FactoryRequest;
 
@@ -17,7 +18,7 @@ class FactoryController
         $showHidden = $request->get('showHiddenModelAttr', false);
         $overrides = $request->get('overrides', []);
 
-        $modelWithNamespace = $this->guess_class_and_namespace($model);
+        $modelWithNamespace = LaraMote::guess_class_and_namespace($model);
 
         $factory = $name
             ? factory($modelWithNamespace, $name, $amount)
@@ -36,19 +37,5 @@ class FactoryController
                 })
                 : $factoryResult->makeVisible($factoryResult->getHidden())
             : $factoryResult;
-    }
-
-    private function guess_class_and_namespace($model)
-    {
-        $modelWithNamespace = null;
-
-        if (class_exists($model)) {
-            $modelWithNamespace = get_class(new $model);
-        } else {
-            $modelWithNamespace = class_exists($model = 'App\\' . $model)
-                ? get_class(new $model)
-                : null;
-        }
-        return $modelWithNamespace;
     }
 }
