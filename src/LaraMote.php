@@ -15,6 +15,10 @@ class LaraMote
             return get_class(new $appModel);
         }
 
+        if(class_exists($appModel = 'App\\Models\\' . $model)){
+            return get_class(new $appModel);
+        }
+
         throw new \Exception("Class '{$model}' not found.");
     }
 }
