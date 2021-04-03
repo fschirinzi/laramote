@@ -18,7 +18,7 @@ class EnsureUserIsAuthorized
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        $allowed = app()->environment(['local','testing'])
+        $allowed = app()->environment(config('laramote.allowed_environments'))
             || Gate::allows('useLaraMote', [$request->user()]);
 
         abort_unless($allowed, 403);

@@ -16,6 +16,8 @@ return [
     |
     */
 
+    'allowed_environments' => explode(',', env('LARAMOTE_ENVIRONMENTS', 'local,testing')),
+
     'middleware' => [
         'api',
         ForceJsonResponse::class,
