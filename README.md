@@ -41,6 +41,10 @@ At the moment, these features are implemented:
 
 ## Installation
 
+| Version | Supported Factories |
+| --- | --- |
+| v0.\*, v1.\* | Legacy Factories |
+
 You can install the package via composer:
 
 ```bash
