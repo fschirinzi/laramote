@@ -38,12 +38,14 @@ At the moment, these features are implemented:
 - [ ] Make Commands working <br>
 - [ ] Make Tests <br>
 - [ ] Add wiki page with all endpoints and their parameters
+- [ ] Support all class based factory features
 
 ## Installation
 
 | Version | Supported Factories |
 | --- | --- |
 | v0.\*, v1.\* | Legacy Factories |
+| v2.\* | Class based factories
 
 You can install the package via composer:
 
