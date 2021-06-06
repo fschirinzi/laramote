@@ -34,9 +34,9 @@ class FactoryController
             : $factoryResult;
     }
 
-    protected function applyStates($factory, array $states)
+    protected function applyStates($factory, $states)
     {
-        if(!$states && is_array($states)){
+        if(!($states && is_array($states))){
             return $factory;
         }
 
