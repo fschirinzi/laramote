@@ -27,7 +27,7 @@ class LaraMoteServiceProvider extends ServiceProvider
             ], 'laramote-config');
 
             $this->publishes([
-                __DIR__.'/../stubs/LaraMoteServiceProvider.stub' => app_path('Providers/LaraMoteServiceProvider.php',
+                __DIR__.'/../stubs/LaraMoteServiceProvider.stub' => app_path('Providers/LaraMoteServiceProvider.php'),
             ], 'laramote-provider');
         }
     }
