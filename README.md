@@ -1,8 +1,8 @@
 # Remote for Laravel
 
+[![Test](https://github.com/fschirinzi/laramote/workflows/Tests/badge.svg)](https://github.com/fschirinzi/translation-manager-for-laravel/actions?query=workflow%3ATests)
+[![StyleCI](https://github.styleci.io/repos/445867028/shield?style=flat-square)](https://github.styleci.io/repos/445867028)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fschirinzi/laramote.svg?style=flat-square)](https://packagist.org/packages/fschirinzi/laramote)
-[![Build Status](https://img.shields.io/travis/fschirinzi/laramote/master.svg?style=flat-square)](https://travis-ci.org/fschirinzi/laramote)
-[![Quality Score](https://img.shields.io/scrutinizer/g/fschirinzi/laramote.svg?style=flat-square)](https://scrutinizer-ci.com/g/fschirinzi/laramote)
 [![Total Downloads](https://img.shields.io/packagist/dt/fschirinzi/laramote.svg?style=flat-square)](https://packagist.org/packages/fschirinzi/laramote)
 
 LaraMote allows you to run tasks in Laravel from remote. This package is helpful if you are testing

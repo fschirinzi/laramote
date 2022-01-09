@@ -2,9 +2,9 @@
 
 namespace Fschirinzi\LaraMote\Http\Controllers;
 
+use Fschirinzi\LaraMote\Http\Requests\FactoryRequest;
 use Fschirinzi\LaraMote\LaraMote;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Fschirinzi\LaraMote\Http\Requests\FactoryRequest;
 
 class FactoryController
 {
@@ -27,22 +27,24 @@ class FactoryController
 
         return ($showHidden)
             ? is_a($factoryResult, EloquentCollection::class)
-                ? $factoryResult->map(function($item) {
-                    return $item->makeVisible($item->getHidden());
-                })
+                ? $factoryResult->map(
+                    function ($item) {
+                        return $item->makeVisible($item->getHidden());
+                    }
+                )
                 : $factoryResult->makeVisible($factoryResult->getHidden())
             : $factoryResult;
     }
 
     protected function applyStates($factory, $states)
     {
-        if(!($states && is_array($states))){
+        if (! ($states && is_array($states))) {
             return $factory;
         }
 
-        if($this->array_has_string_keys($states)) {
+        if ($this->array_has_string_keys($states)) {
             foreach ($states as $key => $value) {
-                if($value){
+                if ($value) {
                     $factory = $factory->{$key}($value);
                     continue;
                 }
@@ -60,7 +62,8 @@ class FactoryController
         return $factory;
     }
 
-    protected function array_has_string_keys(array $array) {
+    protected function array_has_string_keys(array $array)
+    {
         return count(array_filter(array_keys($array), 'is_string')) > 0;
     }
 }
