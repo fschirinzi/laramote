@@ -24,6 +24,7 @@ class AuthController
     protected function getDefaultAuthModel()
     {
         $authPasswordDefault = config('auth.defaults.passwords');
+        
         return config("auth.providers.{$authPasswordDefault}.model");
     }
 }

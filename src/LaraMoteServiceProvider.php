@@ -19,20 +19,16 @@ class LaraMoteServiceProvider extends ServiceProvider
 
         Route::middlewareGroup('LaraMote', config('laramote.middleware', []));
 
-        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
+        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
 
         if ($this->app->runningInConsole()) {
-            $this->publishes(
-                [
-                __DIR__ . '/../config/laramote.php' => config_path('laramote.php'),
-                ], 'laramote-config'
-            );
+            $this->publishes([
+                __DIR__.'/../config/laramote.php' => config_path('laramote.php'),
+            ], 'laramote-config');
 
-            $this->publishes(
-                [
-                __DIR__ . '/../stubs/LaraMoteServiceProvider.stub' => app_path('Providers/LaraMoteServiceProvider.php'),
-                ], 'laramote-provider'
-            );
+            $this->publishes([
+                __DIR__.'/../stubs/LaraMoteServiceProvider.stub' => app_path('Providers/LaraMoteServiceProvider.php',
+            ], 'laramote-provider');
         }
     }
 
@@ -42,8 +38,8 @@ class LaraMoteServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__ . '/../config/laramote.php', 'laramote');
-
+        $this->mergeConfigFrom(__DIR__.'/../config/laramote.php', 'laramote');
+        
         // TODO: Commands not working yet
         // ERROR: Target class [Fschirinzi\LaraMote\Console\InstallCommand] does not exist.
         $this->commands(

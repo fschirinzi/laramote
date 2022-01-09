@@ -2,11 +2,11 @@
 
 namespace Fschirinzi\LaraMote\Tests\Unit;
 
-
-use Fschirinzi\LaraMote\LaraMoteServiceProvider;
+use Fschirinzi\LaraMote\Tests\TestCase;
 use Illuminate\Support\Facades\Route;
+use Fschirinzi\LaraMote\LaraMoteServiceProvider;
 
-class RouteTest extends \Orchestra\Testbench\TestCase
+class RouteTest extends TestCase
 {
     protected function getPackageProviders($app)
     {
@@ -20,7 +20,7 @@ class RouteTest extends \Orchestra\Testbench\TestCase
     public function it_exposes_routes_in_testing()
     {
         $this->routeNames()->each(
-            fn($name) => $this->assertTrue(Route::has($name))
+            fn ($name) => $this->assertTrue(Route::has($name))
         );
     }
 
@@ -31,11 +31,12 @@ class RouteTest extends \Orchestra\Testbench\TestCase
     public function it_does_not_expose_routes_in_production()
     {
         $this->routeNames()->each(
-            fn($name) => $this->assertFalse(Route::has($name))
+            fn ($name) => $this->assertFalse(Route::has($name))
         );
     }
 
-    protected function routeNames(){
+    protected function routeNames()
+    {
         return collect([
             'laramote.artisan',
             'laramote.login',
@@ -46,11 +47,11 @@ class RouteTest extends \Orchestra\Testbench\TestCase
 
     protected function setUpTestingEnvironment()
     {
-        app()->detectEnvironment(fn() => 'testing');
+        app()->detectEnvironment(fn () => 'testing');
     }
 
     protected function setUpProductionEnvironment()
     {
-        app()->detectEnvironment(fn() => 'production');
+        app()->detectEnvironment(fn () => 'production');
     }
 }

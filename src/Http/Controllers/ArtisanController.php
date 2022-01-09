@@ -15,9 +15,9 @@ class ArtisanController
 
         return response()->json(
             [
-            'command' => $command,
-            'parameters' => $parameters,
-            'log' => \Artisan::output(),
+                'command' => $command,
+                'parameters' => $parameters,
+                'log' => \Artisan::output(),
             ]
         );
     }

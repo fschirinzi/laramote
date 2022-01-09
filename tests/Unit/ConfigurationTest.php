@@ -2,7 +2,6 @@
 
 namespace Fschirinzi\LaraMote\Tests\Unit;
 
-
 class ConfigurationTest extends \Fschirinzi\LaraMote\Tests\TestCase
 {
     /** @test */

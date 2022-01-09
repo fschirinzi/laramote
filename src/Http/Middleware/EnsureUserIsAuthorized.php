@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Gate;
 class EnsureUserIsAuthorized
 {
     /**
-     * Ensures the user is authorized to use the LaraMote endpoints
+     * Ensures the user is authorized to use the LaraMote endpoints.
      *
      * @param  Request     $request
      * @param  Closure     $next

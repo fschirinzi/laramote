@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('laramote')
     ->middleware('LaraMote')
     ->group(function () {
-
         Route::post('artisan', [ArtisanController::class, 'call'])->name('laramote.artisan');
 
         Route::post('auth/login', [AuthController::class, 'login'])->name('laramote.login');

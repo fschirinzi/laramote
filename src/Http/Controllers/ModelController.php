@@ -7,7 +7,6 @@ use Fschirinzi\LaraMote\LaraMote;
 
 class ModelController
 {
-
     public function call(ModelRequest $request)
     {
         $modelClass = $request->get('model');
@@ -35,15 +34,14 @@ class ModelController
 
         $result = $model->get()->collect();
 
-        return !$showHidden
+        return ! $showHidden
             ? $result
             : $result->map(
                 function ($model) use ($relationships) {
                     return $model->makeVisible($model->getHidden())
                         ->when(
                             $relationships, function ($m) use ($relationships) {
-                                foreach ($relationships as $relationship)
-                                {
+                                foreach ($relationships as $relationship) {
                                     $m->getModel()->$relationship->makeVisible($m->getModel()->$relationship->getHidden());
                                 }
                             }

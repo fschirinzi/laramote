@@ -38,13 +38,13 @@ class FactoryController
 
     protected function applyStates($factory, $states)
     {
-        if(!($states && is_array($states))) {
+        if (! ($states && is_array($states))) {
             return $factory;
         }
 
-        if($this->array_has_string_keys($states)) {
+        if ($this->array_has_string_keys($states)) {
             foreach ($states as $key => $value) {
-                if($value) {
+                if ($value) {
                     $factory = $factory->{$key}($value);
                     continue;
                 }
