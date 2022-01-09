@@ -10,11 +10,11 @@ Route::prefix('laramote')
     ->middleware('LaraMote')
     ->group(function () {
 
-        Route::post('artisan', [ArtisanController::class, 'call']);
+        Route::post('artisan', [ArtisanController::class, 'call'])->name('laramote.artisan');
 
-        Route::post('auth/login', [AuthController::class, 'login']);
+        Route::post('auth/login', [AuthController::class, 'login'])->name('laramote.login');
 
-        Route::post('factory', [FactoryController::class, 'call']);
+        Route::post('factory', [FactoryController::class, 'call'])->name('laramote.factory');
 
-        Route::post('model', [ModelController::class, 'call']);
+        Route::post('model', [ModelController::class, 'call'])->name('laramote.model');
     });

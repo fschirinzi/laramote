@@ -12,6 +12,10 @@ class LaraMoteServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
+        if ($this->app->environment('production')) {
+            return;
+        }
+
         Route::middlewareGroup('LaraMote', config('laramote.middleware', []));
 
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
