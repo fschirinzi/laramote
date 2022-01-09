@@ -21,7 +21,8 @@ class AuthController
         return auth()->login($model, $remember);
     }
 
-    protected function getDefaultAuthModel(){
+    protected function getDefaultAuthModel()
+    {
         $authPasswordDefault = config('auth.defaults.passwords');
         return config("auth.providers.{$authPasswordDefault}.model");
     }

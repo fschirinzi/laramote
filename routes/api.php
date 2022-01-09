@@ -1,7 +1,7 @@
 <?php
 
-use Fschirinzi\LaraMote\Http\Controllers\AuthController;
 use Fschirinzi\LaraMote\Http\Controllers\ArtisanController;
+use Fschirinzi\LaraMote\Http\Controllers\AuthController;
 use Fschirinzi\LaraMote\Http\Controllers\FactoryController;
 use Fschirinzi\LaraMote\Http\Controllers\ModelController;
 use Illuminate\Support\Facades\Route;

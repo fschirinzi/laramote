@@ -3,8 +3,8 @@
 namespace Fschirinzi\LaraMote\Tests\Unit;
 
 
-use Illuminate\Support\Facades\Route;
 use Fschirinzi\LaraMote\LaraMoteServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class RouteTest extends \Orchestra\Testbench\TestCase
 {

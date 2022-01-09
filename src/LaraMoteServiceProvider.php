@@ -5,7 +5,8 @@ namespace Fschirinzi\LaraMote;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class LaraMoteServiceProvider extends ServiceProvider {
+class LaraMoteServiceProvider extends ServiceProvider
+{
 
     /**
      * Bootstrap the application services.
@@ -20,15 +21,18 @@ class LaraMoteServiceProvider extends ServiceProvider {
 
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
 
-        if ($this->app->runningInConsole())
-        {
-            $this->publishes([
+        if ($this->app->runningInConsole()) {
+            $this->publishes(
+                [
                 __DIR__ . '/../config/laramote.php' => config_path('laramote.php'),
-            ], 'laramote-config');
+                ], 'laramote-config'
+            );
 
-            $this->publishes([
+            $this->publishes(
+                [
                 __DIR__ . '/../stubs/LaraMoteServiceProvider.stub' => app_path('Providers/LaraMoteServiceProvider.php'),
-            ], 'laramote-provider');
+                ], 'laramote-provider'
+            );
         }
     }
 
@@ -42,14 +46,18 @@ class LaraMoteServiceProvider extends ServiceProvider {
 
         // TODO: Commands not working yet
         // ERROR: Target class [Fschirinzi\LaraMote\Console\InstallCommand] does not exist.
-        $this->commands([
+        $this->commands(
+            [
             //InstallCommand::class,
             //PublishCommand::class,
-        ]);
+            ]
+        );
 
         // Register the main class to use with the facade
-        $this->app->singleton('laramote', function () {
-            return new LaraMote;
-        });
+        $this->app->singleton(
+            'laramote', function () {
+                return new LaraMote;
+            }
+        );
     }
 }

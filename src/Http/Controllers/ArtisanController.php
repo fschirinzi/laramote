@@ -13,10 +13,12 @@ class ArtisanController
 
         \Artisan::call($command, $parameters);
 
-        return response()->json([
+        return response()->json(
+            [
             'command' => $command,
             'parameters' => $parameters,
-            'log' => \Artisan::output()
-        ]);
+            'log' => \Artisan::output(),
+            ]
+        );
     }
 }
