@@ -2,9 +2,9 @@
 
 namespace Fschirinzi\LaraMote\Tests\Unit;
 
+use Fschirinzi\LaraMote\LaraMoteServiceProvider;
 use Fschirinzi\LaraMote\Tests\TestCase;
 use Illuminate\Support\Facades\Route;
-use Fschirinzi\LaraMote\LaraMoteServiceProvider;
 
 class RouteTest extends TestCase
 {
