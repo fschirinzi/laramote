@@ -7,7 +7,6 @@ use Illuminate\Support\ServiceProvider;
 
 class LaraMoteServiceProvider extends ServiceProvider
 {
-
     /**
      * Bootstrap the application services.
      */
@@ -39,13 +38,13 @@ class LaraMoteServiceProvider extends ServiceProvider
     {
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/laramote.php', 'laramote');
-        
+
         // TODO: Commands not working yet
         // ERROR: Target class [Fschirinzi\LaraMote\Console\InstallCommand] does not exist.
         $this->commands(
             [
-            //InstallCommand::class,
-            //PublishCommand::class,
+                //InstallCommand::class,
+                //PublishCommand::class,
             ]
         );
 
