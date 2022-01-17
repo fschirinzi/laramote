@@ -2,14 +2,11 @@
 
 namespace Fschirinzi\LaraMote\Http\Controllers;
 
-use App\User;
 use Fschirinzi\LaraMote\Http\Requests\ModelRequest;
 use Fschirinzi\LaraMote\LaraMote;
-use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Fschirinzi\LaraMote\Http\Requests\FactoryRequest;
 
-class ModelController {
-
+class ModelController
+{
     public function call(ModelRequest $request)
     {
         $modelClass = $request->get('model');
@@ -23,26 +20,33 @@ class ModelController {
 
         $model = (new $modelWithNamespace)->where($key, $id);
 
-        $model->when($relationships, function ($q) use ($relationships) {
-            return $q->with($relationships);
-        });
+        $model->when(
+            $relationships, function ($q) use ($relationships) {
+                return $q->with($relationships);
+            }
+        );
 
-        $model->when($limit || $limit === 0, function ($q) use ($limit) {
-            return $q->take($limit);
-        });
+        $model->when(
+            $limit || $limit === 0, function ($q) use ($limit) {
+                return $q->take($limit);
+            }
+        );
 
         $result = $model->get()->collect();
 
-        return !$showHidden
+        return ! $showHidden
             ? $result
-            : $result->map(function ($model) use ($relationships) {
-                return $model->makeVisible($model->getHidden())
-                    ->when($relationships, function ($m) use ($relationships) {
-                        foreach ($relationships as $relationship)
-                        {
-                            $m->getModel()->$relationship->makeVisible($m->getModel()->$relationship->getHidden());
-                        }
-                    })->getModel();
-            });
+            : $result->map(
+                function ($model) use ($relationships) {
+                    return $model->makeVisible($model->getHidden())
+                        ->when(
+                            $relationships, function ($m) use ($relationships) {
+                                foreach ($relationships as $relationship) {
+                                    $m->getModel()->$relationship->makeVisible($m->getModel()->$relationship->getHidden());
+                                }
+                            }
+                        )->getModel();
+                }
+            );
     }
 }
